@@ -12,11 +12,6 @@ url = "about/"
 weight = 2
 
 [[main]]
-name = "Elements"
-url = "elements/"
-weight = 4
-
-[[main]]
 weight = 3
 name = "Search"
 hasChildren = true
@@ -30,6 +25,11 @@ hasChildren = true
   parent = "Search"
   name = "Categories"
   url = "categories/"
+
+  #[[main]]
+  #name = "Elements"
+  #url = "elements/"
+  #weight = 4
   
   #[[main]]
   #parent = "Pages"#para criar um menu com submenus
