@@ -18,7 +18,7 @@ hasChildren = true
 
   [[main]]
   parent = "Search"
-  name = "Search2"
+  name = "Posts"
   url = "search/"
   
   [[main]]
