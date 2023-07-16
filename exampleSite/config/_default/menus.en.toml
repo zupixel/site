@@ -17,7 +17,7 @@ name = "Search"
 hasChildren = true
   
   [[main]]
-  parent = "Search"
+  parent = "Find"
   name = "Search"
   url = "search/"
 
