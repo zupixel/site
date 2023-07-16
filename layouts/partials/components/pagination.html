@@ -51,7 +51,7 @@
 
     <!-- Page numbers -->
     {{ range $paginator.Pagers }}
-      {{ $.Scratch.Set "page_number_flag" false }}
+      {{ $.Scratch.Set "page_number_flag" true }}
       <!-- Advanced page numbers. -->
       {{ if gt $paginator.TotalPages $max_links }}
         <!-- Lower limit pages. -->
