@@ -51,7 +51,7 @@
 
     <!-- Page numbers -->
     {{ range $paginator.Pagers }}
-      {{ $.Scratch.Set "page_number_flag" true }}
+      {{ $.Scratch.Set "page_number_flag" false }}
       <!-- Advanced page numbers. -->
       {{ if gt $paginator.TotalPages $max_links }}
         <!-- Lower limit pages. -->
@@ -89,7 +89,7 @@
           </span>
         {{ else }}
           <a
-            href="#"
+            href="/page/".PageNumber
             aria-current="page"
             class="text-dark hover:bg-theme-light dark:text-darkmode-dark dark:hover:bg-darkmode-theme-light rounded px-4 py-2">
             {{ .PageNumber }}
