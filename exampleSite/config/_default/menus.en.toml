@@ -12,23 +12,19 @@ url = "about/"
 weight = 2
 
 [[main]]
-parent = "Search"
+weight = 3
 name = "Search"
-url = "search/"
+hasChildren = true
 
   [[main]]
-  weight = 3
   parent = "Search"
-  name = "Find"
+  name = "Search"
   url = "search/"
-  hasChildren = true
-
+  
   [[main]]
-  weight = 4
   parent = "Search"
   name = "Categories"
   url = "categories/"
-  hasChildren = true
 
   #[[main]]
   #name = "Elements"
