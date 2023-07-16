@@ -3,7 +3,7 @@
 # main menu
 [[main]]
 name = "Home"
-url = "/"
+url = "blog/" #antes era /
 weight = 1
 
 [[main]]
@@ -14,56 +14,56 @@ weight = 2
 [[main]]
 name = "Elements"
 url = "elements/"
-weight = 3
+weight = 4
 
 [[main]]
-weight = 4
-name = "Pages"
+weight = 3
+name = "Search"
 hasChildren = true
-
+  
   [[main]]
-  parent = "Pages"
-  name = "Blog"
-  url = "blog/"
-
-  [[main]]
-  parent = "Pages"
-  name = "Contact"
-  url = "contact/"
-
-  [[main]]
-  parent = "Pages"
-  name = "Authors"
-  url = "authors/"
-
-  [[main]]
-  parent = "Pages"
+  parent = "Search"
   name = "Search"
   url = "search/"
 
   [[main]]
-  parent = "Pages"
+  parent = "Search"
   name = "Categories"
   url = "categories/"
+  
+  #[[main]]
+  #parent = "Pages"#para criar um menu com submenus
+  #name = "Pages"
+  #url = "blog/"
 
-  [[main]]
-  parent = "Pages"
-  name = "404 Page"
-  url = "404/"
+  #[[main]]
+  #parent = "Pages"
+  #name = "Contact"
+  #url = "contact/"
+
+  #[[main]]
+  #parent = "Pages"
+  #name = "Authors"
+  #url = "authors/"
+
+  #[[main]]
+  #parent = "Pages"
+  #name = "404 Page"
+  #url = "404/"
 
 
 # footer menu
 [[footer]]
-name = "About"
-url = "about/"
+name = "Authors"
+url = "authors/"
 weight = 1
 
-[[footer]]
-name = "Elements"
-url = "elements/"
-weight = 2
+#[[footer]]
+#name = "Elements"
+#url = "elements/"
+#weight = 2
 
-[[footer]]
-name = "Privacy Policy"
-url = "privacy-policy/"
-weight = 3
+#[[footer]]
+#name = "Privacy Policy"
+#url = "privacy-policy/"
+#weight = 3
