@@ -93,7 +93,7 @@ If your problem or idea has not been addressed yet, feel free to [open a new iss
 
 ## 📝 License
 
-Copyright (c) 2023 - [Zu Pixel](https://zeon.studio/)
+Copyright by ZuPixel
 
 **Code License:** Released under the [MIT](https://github.comzeon-studio/hugoplate/blob/main/LICENSE) license.
 
