@@ -1,7 +1,10 @@
 ######################## default configuration ####################
-baseURL = "https://hugoplate.netlify.app/"
+# The base URL of your site (required). This will be prepended to all relative URLs.
+baseURL = "/"
+# Title of your website (required).
 title = "Hugoplate"
-# theme = "hugoplate" 
+# Your theme name
+# theme = "hugoplate"
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
 timeZone = "America/New_York"
 # post pagination
@@ -9,7 +12,7 @@ paginate = 2 # see https://gohugo.io/extras/pagination/
 # post excerpt
 summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
 # google analytics
-googleAnalytics = "UA-123456-78" # example: UA-123456-78, for more info, read the article https://support.google.com/analytics/answer/1008080?hl=en
+googleAnalytics = "G-MEASUREMENT_ID" # see https://gohugo.io/templates/internal/#configure-google-analytics
 # disqus short name
 disqusShortname = "themefisher-template" # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
 # disable language
@@ -40,14 +43,20 @@ useResourceCacheWhen = 'fallback'
 [build.buildStats]
 enable = true
 [[build.cachebusters]]
-source = 'assets/.*\.(js|ts|jsx|tsx)'
-target = '(js|scripts|javascript)'
-[[build.cachebusters]]
-source = 'assets/.*\.(css|sass|scss)$'
-target = '(css|styles|scss|sass)'
+source = 'assets/watching/hugo_stats\.json'
+target = 'style\.css'
 [[build.cachebusters]]
 source = '(postcss|tailwind)\.config\.js'
-target = '(css|styles|scss|sass)'
+target = 'css'
+[[build.cachebusters]]
+source = 'assets/.*\.(js|ts|jsx|tsx)'
+target = 'js'
+[[build.cachebusters]]
+source = 'assets/.*\.(css|scss|sass)'
+target = 'css'
+[[build.cachebusters]]
+source = 'data/.*\.(.*)$'
+target = 'css'
 [[build.cachebusters]]
 source = 'assets/.*\.(.*)$'
 target = '$1'
@@ -62,7 +71,7 @@ home = ["HTML", "RSS", "WebAppManifest", "SearchIndex"]
 # See https://github.com/disintegration/imaging
 # Default JPEG or WebP quality setting. Default is 75.
 quality = 90
-resampleFilter = "lanczos"
+resampleFilter = "Lanczos"
 
 ############################ Caches ##############################
 [caches]
@@ -139,10 +148,5 @@ link = "js/tab.js"
 link = "js/modal.js"
 [[params.plugins.js]]
 link = "plugins/cookie.js"
-[[params.plugins.js]]
-link = "plugins/lazy-loader.js"
-[[params.plugins.js]]
-link = "https://cpwebassets.codepen.io/assets/embed/ei.js"
-attributes = "async"
 [[params.plugins.js]]
 link = "plugins/youtube-lite.js"

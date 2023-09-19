@@ -11,19 +11,13 @@
     <!-- navbar toggler -->
     <input id="nav-toggle" type="checkbox" class="hidden" />
     <label
-      id="show-button"
       for="nav-toggle"
-      class="order-2 flex cursor-pointer items-center md:order-1 md:hidden">
-      <svg class="h-6 fill-current" viewBox="0 0 20 20">
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
         <title>Menu Open</title>
         <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
       </svg>
-    </label>
-    <label
-      id="hide-button"
-      for="nav-toggle"
-      class="order-2 hidden cursor-pointer items-center md:order-1">
-      <svg class="h-6 fill-current" viewBox="0 0 20 20">
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
         <title>Menu Close</title>
         <polygon
           points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
@@ -35,7 +29,7 @@
     <!-- main navbar -->
     <ul
       id="nav-menu"
-      class="navbar-nav order-3 hidden w-full pb-6 lg:order-1 lg:flex lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8">
+      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8">
       {{ $currentPage := . }}
       {{ range site.Menus.main }}
         {{ $menuURL := .URL | absLangURL }}
@@ -56,7 +50,7 @@
               </svg>
             </span>
             <ul
-              class="nav-dropdown-list hidden group-hover:block lg:invisible lg:absolute lg:block lg:opacity-0 lg:group-hover:visible lg:group-hover:opacity-100">
+              class="nav-dropdown-list lg:group-hover:visible lg:group-hover:opacity-100">
               {{ range .Children }}
                 {{ $childURL := .URL | absLangURL }}
                 {{ $active := eq $childURL $pageURL }}
@@ -64,17 +58,18 @@
                   <a
                     class="nav-dropdown-link {{ if $active }}
                       active
-                    {{ end }}"
+                    {{- end -}}"
                     {{ if findRE `^http` .URL }}
                       target="_blank" rel="noopener"
                     {{ end }}
-                    href="{{ if findRE `^#` .URL }}
-                      {{ if not $.IsHome }}
-                        {{ site.BaseURL | relLangURL }}
-                      {{ end }}{{ .URL }}
-                    {{ else }}
-                      {{ .URL | relLangURL }}
-                    {{ end }}">
+                    href="{{- if findRE `^#` .URL -}}
+                      {{- if not $.IsHome -}}
+                        {{- site.BaseURL | relLangURL -}}
+                      {{- end }}
+                      {{- .URL -}}
+                    {{- else -}}
+                      {{- .URL | relLangURL -}}
+                    {{- end -}}">
                     {{ .Name }}
                   </a>
                 </li>
@@ -84,17 +79,17 @@
         {{ else }}
           <li class="nav-item">
             <a
-              class="nav-link {{ if $active }}active{{ end }}"
+              class="nav-link {{ if $active }}active{{- end -}}"
               {{ if findRE `^http` .URL }}
                 target="_blank" rel="noopener"
               {{ end }}
-              href="{{ if findRE `^#` .URL }}
-                {{ if not $.IsHome }}
-                  {{ site.BaseURL | relLangURL }}
-                {{ end }}{{ .URL }}
-              {{ else }}
-                {{ .URL | relLangURL }}
-              {{ end }}"
+              href="{{- if findRE `^#` .URL -}}
+                {{- if not $.IsHome -}}
+                  {{- site.BaseURL | relLangURL -}}
+                {{- end }}{{- .URL -}}
+              {{- else -}}
+                {{- .URL | relLangURL -}}
+              {{- end -}}"
               >{{ .Name }}</a
             >
           </li>
