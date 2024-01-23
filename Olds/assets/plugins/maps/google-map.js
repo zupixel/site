@@ -114,7 +114,7 @@ function initialize() {
       elementType: "geometry",
       stylers: [
         {
-          hue: "#ffff00",
+          hue: "#99991e",
         },
         {
           lightness: -25,
