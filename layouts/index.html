@@ -3,9 +3,10 @@
     <!-- Banner -->
     {{ with .Params.banner }}
     <section class="section pt-14">
+      <div id="homing-particles" class="section-overlay"></div>
       <div class="container">
         <div class="row justify-center">
-          <div class="col-lg-7 mb-8 text-center order-lg-2">
+          <div class="lg:col-7 mb-8 text-center">
             <h1 class="mb-4">
               {{ .title | markdownify }}
             </h1>
@@ -21,8 +22,9 @@
               {{ end }}
             {{ end }}
           </div>
-          <div class="col-12 order-lg-1">
+          <div class="col-12">
             {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto" "Size" "800x") }}
+            {{ partial "particles.html" . }}
           </div>
         </div>
       </div>
