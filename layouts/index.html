@@ -4,9 +4,9 @@
     {{ with .Params.banner }}
       <section class="section pt-14">
          <div class="container">
-          <div id="homing-particles"></div>
-          {{ partial "particles.html" . }}
           <div class="row justify-center">
+            <div id="homing-particles"></div>
+            {{ partial "particles.html" . }}
             <div class="lg:col-7 mb-8 text-center">
               <h1 class="mb-4">
                 {{ .title | markdownify }}
