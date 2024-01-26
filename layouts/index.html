@@ -2,10 +2,10 @@
   {{ with site.GetPage "homepage" }}
     <!-- Banner -->
     {{ with .Params.banner }}
-    <div id="homing-particles" class="section-overlay"></div>
       <section class="section pt-14">
-        {{ partial "particles.html" . }}
          <div class="container">
+          <div id="homing-particles" class="section-overlay"></div>
+          {{ partial "particles.html" . }}
           <div class="row justify-center">
             <div class="lg:col-7 mb-8 text-center">
               <h1 class="mb-4">
