@@ -4,7 +4,7 @@
     {{ with .Params.banner }}
       <section class="section pt-14">
         <div id="homing-particles"></div>
-        {{ partial "particles.html" . }}
+        
         <div class="container">
           <div class="row justify-center">
             <div class="lg:col-7 mb-8 text-center">
@@ -25,6 +25,7 @@
             </div>
             <div class="col-12">
               {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto" "Size" "800x") }}
+              {{ partial "particles.html" . }}
             </div>
           </div>
         </div>
