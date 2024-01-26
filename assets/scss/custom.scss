@@ -7,9 +7,13 @@
     min-height: 700px;
     width: 100%;
     z-index: -100;
-}
-
-.page-amplitude-wrapper + .section-overlay,
-#page-particle + .section-overlay {
+  }
+  
+  .page-amplitude-wrapper + .section-overlay,
+  #page-particle + .section-overlay {
     z-index: 0;
-}
+  }
+  
+  .particles {
+    z-index: -99;
+  }
