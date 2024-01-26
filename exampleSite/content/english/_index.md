@@ -1,7 +1,7 @@
 ---
 # Banner
 banner:
-  title: "The Ultimate Starter Template You Need To Start Your Hugo Project"
+  title: "Zu Pixel"
   content: "Hugoplate is"
   image: "/images/banner.png"
   button:
