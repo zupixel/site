@@ -3,8 +3,7 @@
     <!-- Banner -->
     {{ with .Params.banner }}
     <section class="section pt-14" id="homing-particles">
-      <div class="col-12">
-   <!--  <div id="homing-particles" class="section-overlay"></div> 
+   <!--  <div id="homing-particles" class="section-overlay"></div> -->
       <div class="container">
         <div class="row justify-center">
           <div class="lg:col-7 mb-8 text-center">
@@ -24,11 +23,10 @@
             {{ end }}
           </div>
           <div class="col-12">
-           {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto" "Size" "800x") }}
+           <!-- {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto" "Size" "800x") }}-->
           </div>
         </div>
-      </div>-->
-    </div>
+      </div>
       {{ partial "particles.html" . }}
     </section>
   {{ end }}
