@@ -1,8 +1,8 @@
 ---
 # Banner
 banner:
-  title: "The Ultimate S Your Hugo Project"
-  content: "Hugoplate is providing everything you need to jumpstart your Hugo project and save valuable time."
+  title: "Zu Pixel - Classical Music"
+  content: "The Channel"
   image: "/images/banner.png"
   button:
     enable: true
