@@ -10,6 +10,7 @@
   <meta name="keywords" content="Kounter, html theme, Coming Soon Landing Page, Coming Soon Landing Page template, html landing page, one page, responsive landing page">
   <meta name="author" content="Egotype">
 <!--CSS PARTICLES -->
+{{ partial "css-particles.html" . }}
   <!-- Bootstrap -->
   <link rel="stylesheet" href="partials/css-particles/bootstrap-particles.css">
   <!-- Custom -->
@@ -61,10 +62,9 @@
 <!-- /#page -->
 
 <!-- Scripts -->
-<script src="partials/jquery-particles.js"></script>
-<script src="partials/homing-particles.js"></script>
-<!-- Custom Script -->
-<script src="partials/custom-particles.js"></script>
+{{ partial "jquery-particles.html" . }}
+{{ partial "homing-particles.html" . }}
+{{ partial "custom-particles.html" . }}
 </body>
 </html>
 </html>
