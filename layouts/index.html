@@ -3,6 +3,10 @@
     <!-- Banner -->
     {{ with .Params.banner }}
       <section class="section pt-14">
+        <!-- Homing Particle JS Loader -->
+        <div id="homing-particles" class="section-overlay"></div>
+        <!-- Overlay BG -->
+        <div class="section-overlay bg-black overlay-opacity-2"></div>
           <div class="container">
           <div class="row justify-center">
             <div class="lg:col-7 mb-8 text-center">
@@ -26,40 +30,7 @@
             </div>
           </div>
         </div>
-        <!----- Particle ----->
 
-<!-- Homing Particle JS Loader -->
-<div id="homing-particles" class="section-overlay"></div>
-<!-- /end Homing Particle JS Loader -->
-<!-- Overlay BG -->
-<div class="container">
-  <div class="section-overlay bg-black overlay-opacity-2"></div>
-<div id="info" class="page-info"></div>
-  <div class="row justify-center">
-    <div class="lg:col-7 mb-8 text-center">
-      <h1 class="mb-4">
-        {{ .title | markdownify }}
-      </h1>
-      <p class="mb-8">
-        {{ .content | markdownify }}
-      </p>
-      {{ with .button }}
-        {{ if .enable }}
-          <a class="btn btn-primary" href="{{ .link | absURL }}">
-            {{ .label }}
-            <i class="fa fa-arrow-right pl-2"></i>
-          </a>
-        {{ end }}
-      {{ end }}
-    </div>
-    <div class="col-12">
-      {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto" "Size" "800x") }}
-    </div>
-  </div>
-</div>
-
-
-<!----- End Particle ----->
         {{ partial "jquery-particles.html" . }}
         {{ partial "homing-particles.html" . }}
         {{ partial "custom-particles.html" . }}
