@@ -3,12 +3,6 @@
     <!-- Banner -->
     {{ with .Params.banner }}
       <section class="section pt-14">
-<!-- Homing Particle JS Loader -->
-<div id="homing-particles" class="section-overlay"></div>
-<!-- /end Homing Particle JS Loader -->
-<!-- Overlay BG -->
-<div class="section-overlay bg-black overlay-opacity-2"></div>
-<div id="info" class="page-info"></div>
           <div class="container">
           <div class="row justify-center">
             <div class="lg:col-7 mb-8 text-center">
@@ -32,6 +26,16 @@
             </div>
           </div>
         </div>
+        <!----- Particle ----->
+
+<!-- Homing Particle JS Loader -->
+<div id="homing-particles" class="section-overlay"></div>
+<!-- /end Homing Particle JS Loader -->
+<!-- Overlay BG -->
+<div class="section-overlay bg-black overlay-opacity-2"></div>
+<div id="info" class="page-info"></div>
+
+<!----- End Particle ----->
         {{ partial "jquery-particles.html" . }}
         {{ partial "homing-particles.html" . }}
         {{ partial "custom-particles.html" . }}
