@@ -10,13 +10,9 @@
   <meta name="keywords" content="Kounter, html theme, Coming Soon Landing Page, Coming Soon Landing Page template, html landing page, one page, responsive landing page">
   <meta name="author" content="Egotype">
 <!--CSS PARTICLES -->
-{{ partial "css-particles.html" . }}
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="partials/css-particles/bootstrap-particles.css">
-  <!-- Custom -->
-  <link rel="stylesheet" href="partials/css-particles/style-particles.css">
-  <!-- Responsive -->
-  <link href="partials/css-particles/responsive-particles.css" rel="stylesheet">
+{{ $styles := $styles | append (resources.Get "scss/bootstrap-particles.scss" | toCSS) }}
+{{ $styles := $styles | append (resources.Get "scss/responsive-particles.scss" | toCSS) }}
+{{ $styles := $styles | append (resources.Get "scss/style-particles.scss" | toCSS) }}
 </head>
 
 <body data-spy="scroll" data-target=".scrollspy" class="bg-dark">
