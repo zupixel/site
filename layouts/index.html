@@ -11,27 +11,6 @@
         <p>
           {{ .content | markdownify }}
         </p>
-        <div class="row justify-center">
-          <div class="lg:col-7 mb-8 text-center">
-            <h1 class="mb-4">
-              {{ .title | markdownify }}
-            </h1>
-            <p class="mb-8">
-              {{ .content | markdownify }}
-            </p><!--
-            {{ with .button }}
-              {{ if .enable }}
-                <a class="btn btn-primary" href="{{ .link | absURL }}">
-                  {{ .label }}
-                  <i class="fa fa-arrow-right pl-2"></i>
-                </a>
-              {{ end }}
-            {{ end }}-->
-          </div>
-          <div class="col-12">
-           <!-- {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto" "Size" "800x") }}-->
-          </div>
-        </div>
       </div>
       {{ partial "particles.html" . }}
     </section>
