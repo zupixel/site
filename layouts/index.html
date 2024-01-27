@@ -2,20 +2,33 @@
   {{ with site.GetPage "homepage" }}
     <!-- Banner -->
     {{ with .Params.banner }}
-    <div id="page">
-      <div id="homing-particles" class="section-overlay"></div>
-      <div class="section-overlay bg-black overlay-opacity-2"></div>
-        <header>
-        </header>
-      <div class="container-fluid">
-        <div class="row">
-          <div id="info" class="col-md-12 page-info col-transform">
+      <section class="section pt-14">
+         <div class="container">
+          <div class="row justify-center">
+            <div class="lg:col-7 mb-8 text-center">
+              <h1 class="mb-4">
+                {{ .title | markdownify }}
+              </h1>
+              <p class="mb-8">
+                {{ .content | markdownify }}
+              </p>
+              {{ with .button }}
+                {{ if .enable }}
+                  <a class="btn btn-primary" href="{{ .link | absURL }}">
+                    {{ .label }}
+                    <i class="fa fa-arrow-right pl-2"></i>
+                  </a>
+                {{ end }}
+              {{ end }}
+            </div>
+            <div class="col-12">
+              {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto" "Size" "800x") }}
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-    {{ partial "particles.html" . }}
-  {{ end }}
+      </section>
+      {{ partial "particles.html" . }}
+    {{ end }}
     <!-- /Banner -->
 
     <!-- Features -->    
