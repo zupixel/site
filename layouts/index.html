@@ -1,6 +1,7 @@
 {{ define "main" }}
   {{ with site.GetPage "homepage" }}
-
+  
+  <section class="section pt-14">
   <div id="page">
     <!-- Homing Particle JS Loader -->
     <div id="homing-particles" class="section-overlay"></div>
@@ -44,7 +45,7 @@
   {{ partial "jquery-particles.html" . }}
   {{ partial "homing-particles.html" . }}
   {{ partial "custom-particles.html" . }}
-
+</section>
 
     <!-- Banner -->
     {{ with .Params.banner }}
