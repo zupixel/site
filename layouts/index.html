@@ -7,12 +7,12 @@
       <!-- <div class="container">-->
         <!--<div class="row justify-center">-->
           <!--<div class="lg:col-7 mb-8 text-center">-->
-            <!--<h1 class="mb-4">
+            <h1 class="mb-4">
               {{ .title | markdownify }}
             </h1>
             <p class="mb-8">
               {{ .content | markdownify }}
-            </p>--><!--
+            </p>
             {{ with .button }}
               {{ if .enable }}
                 <a class="btn btn-primary" href="{{ .link | absURL }}">
@@ -20,7 +20,7 @@
                   <i class="fa fa-arrow-right pl-2"></i>
                 </a>
               {{ end }}
-            {{ end }}-->
+            {{ end }}
           </div>
           <div class="col-12">
            <!-- {{ partial "image" (dict "Src" .image "Alt" "Banner image" "Loading" "eager" "Class" "mx-auto" "Size" "800x") }}-->
