@@ -134,7 +134,7 @@ PARTICLE.prototype = {
 	transformShape : function(){
 		var velocity = Math.sqrt(this.vx * this.vx + this.vy * this.vy);
 		this.scale = 1 - velocity / 15;
-		this.hue = ((180 + velocity * 12) % 360) | 0;
+		this.hue = ((360 + velocity * 2) % 360) | 0;
 	},
 	checkForce : function(context, particle){
 		if(particle.gravity && !particle.on){
