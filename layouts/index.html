@@ -3,7 +3,7 @@
     <!-- Banner -->
     {{ with .Params.banner }}
     <section id="homing-particles">
-      {{ partial "particles.html" . }}
+
     </section>
     <div id="page">
       <div id="homing-particles" class="section-overlay"></div>
@@ -17,6 +17,7 @@
         </div>
       </div>
     </div>
+    {{ partial "particles.html" . }}
   {{ end }}
     <!-- /Banner -->
 
