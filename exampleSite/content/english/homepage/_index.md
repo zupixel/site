@@ -1,8 +1,8 @@
 ---
 # Banner
 banner:
-  title: "Zu Pixel - Classical Music"
-  content: "The Channel"
+  title: "Zu Pixel"
+  content: "The Classical Music universe"
   image: "/images/banner.png"
   button:
     enable: true
