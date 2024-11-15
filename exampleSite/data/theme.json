@@ -20,7 +20,7 @@
         "body": "#1c1c1c",
         "border": "#3E3E3E",
         "theme_light": "#222222",
-        "theme_dark": "#CEBA54"
+        "theme_dark": ""
       },
       "text_color": {
         "default": "#B4AFB6",
