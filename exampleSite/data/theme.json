@@ -10,7 +10,8 @@
       },
       "text_color": {
         "default": "#444444",
-        "dark": "#040404",
+        //"dark": "#040404",
+        //"dark": "#CEBA54",
         "light": "#717171"
       }
     },
@@ -19,7 +20,7 @@
         "primary": "#CEBA54",
         "body": "#1c1c1c",
         "border": "#3E3E3E",
-        "theme_light": "#CEBA54",
+        "theme_light": "#222222",
         "theme_dark": ""
       },
       "text_color": {
